@@ -1,12 +1,31 @@
-% Receive EEG signals, and Display the experiment procedure, and predict a word by ESN (RDESN)
+% Receive EEG signals, and Display the experiment procedure, and predict a word by ESN 
 % 
-% Condition: 
-% Streamming and toolbox packages are above directories
-%
-%*This "toolbox" folder could be adressed to in MATLAB directory. it may be more clear.  
-% 
-% 
-%
+% In the same directry, there are:
+% WordList.csv
+% sigmoid.m
+% shoESN.m
+% sho_Predict_state.m
+% regression.m
+% randData.mat
+% main.m
+% data_prepare.m
+% classifyOutput.m
+% /labstreaminglayer-master
+
+%% LabStreamingLayerのインストールと配置するディレクトリについて：
+% 1. こちら(https://github.com/Emotiv/labstreaminglayer)をDownload ZIPする。
+% 2. そして、（どこでもいいと思うけど）main programがあるディレクトリに展開したフォルダを配置する。
+% 3. /labstreaminglayer-master/examples/matlab下にliblsl-Matlabのようなフォルダがあるが空である(と思う)。
+% それは、1.のgithubからこの部分(liblsl-Matlab @ 62761b0)をクリックして出てくるLSLのgithubをdownload ZIPする。
+% 4. それを展開したものを3.の空であったフォルダの代わりにそこのディレクトリに配置する。
+% 5. これでLSLの設定は完了
+
+%% Psychotoolboxのインストールと配置について：
+% 1. この動画の概要欄：https://www.youtube.com/watch?v=UYQM6LCVus0　もしくは、http://psychtoolbox.org/download#Windowsを参照した時にできた。
+% (SubersionやGstreamがいるやなんやらは、よく覚えていない。。から確かめながら上記のサイト手順を参照してインストールした方がいい。)
+% 2. 配置はprograms/にした。
+% 3. これでPsychotoolboxの設定は完了
+
 %% Starting screen
 Screen('Preference', 'SkipSyncTests', 1);
 
